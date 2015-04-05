@@ -1,5 +1,9 @@
+<%# <h2><%= "Welcome #{current_user.username}"  %1></h2> %>
+<%= link_to "Create Message", new_message_path %>
 <section class="messages">
-  <% @messages.each do |m| %>
-    <%= m.title %> 
+  <ul>
+  <% @messages.each do |message| %>
+    <li class="message"><%= link_to message.subject, message_path(message) %></li>
   <% end %>
+</ul>
 </section>

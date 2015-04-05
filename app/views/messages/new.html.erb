@@ -1,0 +1,13 @@
+<%= form_for @message do |m| %>
+  <%= m.label :recipient_id, "To:" %>
+  <%= m.collection_select :recipient_id, User.all, :id, :username %>
+
+  <%= m.label :subject, "Subject:" %>
+  <%= m.text_field :subject %>
+
+  <%= m.label :body, "Message:" %>
+  <%= m.text_area(:body, size:"30x20") %>
+
+  <%= m.hidden_field :sender_id, :value => current_user.id  %>
+  <%= m.submit "Send Message" %>
+<% end %>

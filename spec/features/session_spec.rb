@@ -2,12 +2,24 @@ require 'rails_helper'
 
 describe 'User Login' do
 
-  it 'visits login page from site root' do
+  before do
     visit login_path
-
-    expect(current_path).to eq login_path
   end
 
-  private
-   
+  context 'successful' do
+    it 'when username and password match existing values' do
+      username = "bill"
+      password = "securty"
+      user = User.create(username: username, password: password)
+
+      visit login_path
+      fill_in("Username", with: username)
+      fill_in("Password", with: password)
+      click_on("Sign In")
+
+      expect(current_path).to eq 'user/1/messages'
+      expect(page).to have_content "Login successful"
+    end
+  end
+
 end

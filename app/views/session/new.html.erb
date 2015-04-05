@@ -1,0 +1,9 @@
+<%= form_tag login_path, id: "login" do %>
+  <%= label_tag :username %>
+  <%= text_field_tag :username, params[:username], placeholder: "Enter username", required: true %>
+  
+  <%= label_tag :password %>
+  <%= password_field_tag :password, params[:password], placeholder: "Enter Password", required: true %>
+
+  <%= submit_tag "Sign In" %>
+<% end %>

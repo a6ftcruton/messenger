@@ -17,7 +17,7 @@ describe 'User Login' do
       fill_in("Password", with: password)
       click_on("Sign In")
 
-      expect(current_path).to eq 'user/1/messages'
+      expect(current_path).to eq root_path 
       expect(page).to have_content "Login successful"
     end
   end

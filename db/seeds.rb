@@ -9,10 +9,10 @@ Message.create(subject: "To Do List", body: "Using every JS framework imagineabl
 
 Message.create(subject: "Meetup", body: "Let's meet at this sweet meetup on Monday.", recipient_id: 2, sender_id: 1)
 Message.create(subject: "Meeting Notes", body: "Very important changes to your retirement plan are happening now.", recipient_id: 2, sender_id: 1) 
-Message.create(subject: "The Artist", body: "Prince is a rock god", recipient_id: 2, sender_id: 5)
+Message.create(subject: "The Artist", body: "Prince is a rock god", recipient_id: 2, sender_id: 1)
 
 Message.create(subject: "All Emails Have", body: "bodybodybodybodybodybodybodybodybody", recipient_id: 3, sender_id: 2)
-Message.create(subject: "Links", body: "http://jimsuttondev.com", recipient_id: 3, sender_id: 5)
+Message.create(subject: "Links", body: "http://jimsuttondev.com", recipient_id: 3, sender_id: 1)
 
 Message.create(subject: "Book List", body: "Read Kim Zetter's Countdown to Zero Day", recipient_id: 4, sender_id: 1 )
 Message.create(subject: "Pensive Friend", body: "...", recipient_id: 4, sender_id: 1)

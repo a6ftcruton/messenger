@@ -2,8 +2,8 @@ class MessagesController < ApplicationController
   before_action :authenticate
 
   def index
-    @messages = Message.all
-    # @messages = Message.where(recipient_id: current_user.id)
+    # @messages = Message.all
+    @messages = Message.where(recipient_id: current_user.id)
   end
 
   def show

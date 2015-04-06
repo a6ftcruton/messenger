@@ -12,9 +12,9 @@ describe 'user signup' do
       fill_in("Username", with: "demo_user")
       fill_in("Password", with: "password1")
       fill_in("Password confirmation", with: "password1")
-      click_on("Create Account")
+      click_button("Create Account")
 
-      expect(current_path).to eq root_path
+      expect(current_path).to eq login_path 
       expect(page).to have_content "Account created successfully"
     end
 
@@ -30,7 +30,7 @@ describe 'user signup' do
       fill_in("Username", with: username)
       fill_in("Password", with: "password2")
       fill_in("Password confirmation", with: "password2")
-      click_on("Create Account")
+      click_button("Create Account")
 
       expect(current_path).to eq users_path
       expect(page).to have_content "Username has already been taken"
@@ -40,7 +40,7 @@ describe 'user signup' do
       fill_in("Username", with: "jo")
       fill_in("Password", with: "password")
       fill_in("Password confirmation", with: "password")
-      click_on("Create Account")
+      click_button("Create Account")
 
       expect(current_path).to eq users_path
       expect(page).to have_content "Username is too short"

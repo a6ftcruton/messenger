@@ -8,14 +8,17 @@
 </head>
 <body>
 
-<%= render 'shared/flash_messages' %>
-<% if current_user %>
-  <%= link_to "Logout", signup_path  %>
-<% else %>
-  <%= link_to "Log In", login_path  %>
-  <%= link_to "Create Account", signup_path %>
-<% end %>
-<%= yield %>
+  <%= render 'shared/flash_messages' %>
+  <% if current_user %>
+    <%= link_to "Logout", logout_path  %>
+    <%= link_to "My Messages", messages_path  %>
+    <%= link_to "Write Message", new_message_path  %>
+  <% else %>
+    <%= link_to "Log In", login_path  %>
+    <%= link_to "Create Account", signup_path %>
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>
